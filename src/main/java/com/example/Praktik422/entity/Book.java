@@ -30,5 +30,6 @@ public class Book {
     @Enumerated(EnumType.STRING)
     private BookStatus bookStatus;
 
-    private String author;
+    @ManyToOne
+    private Author author;
 }

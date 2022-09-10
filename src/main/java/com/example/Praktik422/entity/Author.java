@@ -1,6 +1,7 @@
 package com.example.Praktik422.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = Author.TABLE_NAME)
@@ -14,4 +15,7 @@ public class Author {
     private Long id;
 
     String fullName;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "author")
+    List<Book> books;
 }

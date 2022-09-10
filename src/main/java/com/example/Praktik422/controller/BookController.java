@@ -12,15 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @RestController
 public class BookController {
+
     BookService bookService;
 
-    @PostMapping("/save")
-    public Book save() {
-        Book book = Book.builder()
-                .author("123")
-                .bookStatus(BookStatus.FREE)
-                .name("asd")
-                .build();
-        return bookService.save(book);
-    }
+   @PostMapping("/save")
+   public String save() {
+       return "Hello ";
+   }
 }
